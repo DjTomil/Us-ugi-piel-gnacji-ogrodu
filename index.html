@@ -138,26 +138,7 @@
     <p>&copy; 2025 Usługi Pielęgnacji Ogrodu</p>
   </footer>  <script>
     
-      <?php
-$to = "uslugi.pielegnacji.ogrodu@onet.eu";
-$subject = "Nowe zamówienie ogrodowe";
-
-$name = $_POST['name'];
-$email = $_POST['email'];
-$service = $_POST['service'];
-$message = $_POST['message'];
-
-$body = "Zamówienie od: $name\nEmail klienta: $email\nUsługa: $service\nDodatkowe informacje:\n$message";
-
-$headers = "From: formularz@twojadomena.pl";
-
-if (mail($to, $subject, $body, $headers)) {
-    echo "Dziękujemy! Zamówienie zostało wysłane.";
-} else {
-    echo "Wystąpił błąd. Spróbuj ponownie.";
-}
-?>
-      // Tutaj można dodać obsługę wysyłki danych do serwera lub integrację z API mailowym
-    });
-  </script></body>
-</html>
+      <section id="zamow">
+  <h2>Zamów usługę</h2>
+  <iframe src="https://forms.gle/hEV3HVGDiM8k7ffF8" width="100%" height="600" style="border:0;"></iframe>
+</section>
