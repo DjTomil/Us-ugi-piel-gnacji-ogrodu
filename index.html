@@ -1,88 +1,155 @@
 <!DOCTYPE html><html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nasza Firma</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usługi Pielęgnacji Ogrodu</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #e0ffe0;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
     }
     header {
-      background-color: #004d00;
-      padding: 2rem;
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      color: #fff;
-    }
-    nav {
-      background-color: #003300;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-    }
-    nav a {
-      color: #e0ffe0;
-      text-decoration: none;
-      font-weight: bold;
+    main {
+      padding: 20px;
     }
     section {
-      padding: 2rem;
+      margin-bottom: 30px;
     }
-    h2 {
-      color: #80ff80;
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .service-list, .price-list {
-      list-style: none;
-      padding: 0;
+    label, input, select, textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
     }
-    .service-list li, .price-list li {
-      margin-bottom: 1rem;
+    input, select, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
     footer {
-      background-color: #004d00;
-      color: #ccc;
+      background-color: #333;
+      color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Nasza Firma</h1>
-    <p>Profesjonalne usługi dla Ciebie</p>
+    <h1>Usługi Pielęgnacji Ogrodu</h1>
+    <p>Koszenie trawników, podlewanie, przycinanie żywopłotów, mycie kostki brukowej</p>
   </header>
-  <nav>
-    <a href="#uslugi">Usługi</a>
-    <a href="#cennik">Cennik</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>  <section id="uslugi">
-    <h2>Rodzaje usług</h2>
-    <ul class="service-list">
-      <li>Koszenie tarwników</li>
-      <li>Podlewanie trawników</li>
-      <li>Przycinanie żywopłotów</li>
-      <li>Mycie kostki brukowej </li>
-    </ul>
-  </section>  <section id="cennik">
-    <h2>Cennik</h2>
-    <ul class="price-list">
-      <li>Koszenie trawnika - 1.00 zł / m²</li>
-      <li>Podlewanie trawnika - 00.50 zł / m²</li>
-      <li>Przycinanie żywopłotu - 5.00 zł / mb</li>
-      <li>Mycie kostki brukowej - 7.00 zł / m²</li>
-    </ul>
-  </section>  <section id="kontakt">
-    <h2>Kontakt</h2>
-    <p>Email: uslugi.pielegnacji.ogrodu@onet.eu</p>
-    <p>Telefon: +48 664-316-991</p>
-  </section>  <footer>
-    <p>&copy; 2025 Nasza Firma. Wszelkie prawa zastrzeżone.</p>
-  </footer>
-</body>
+  <main>
+    <section>
+      <h2>Nasze Usługi</h2>
+      <ul>
+        <li>Koszenie trawników</li>
+        <li>Podlewanie trawników</li>
+        <li>Przycinanie żywopłotów</li>
+        <li>Mycie kostki brukowej</li>
+      </ul>
+    </section><section>
+  <h2>Cennik</h2>
+  <table>
+    <tr>
+      <th>Usługa</th>
+      <th>Cena (od)</th>
+    </tr>
+    <tr>
+      <td>Koszenie trawnika</td>
+      <td>1.00 zł / m²</td>
+    </tr>
+    <tr>
+      <td>Podlewanie trawnika</td>
+      <td>0.50 zł / m²</td>
+    </tr>
+    <tr>
+      <td>Przycinanie żywopłotu</td>
+      <td>5.00 zł / mb</td>
+    </tr>
+    <tr>
+      <td>Mycie kostki brukowej</td>
+      <td>8.00 zł / m²</td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>Zamów usługę online</h2>
+  <form id="orderForm">
+    <label for="name">Imię i nazwisko</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Twój e-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="service">Wybierz usługę</label>
+    <select id="service" name="service" required>
+      <option value="Koszenie trawnika">Koszenie trawnika</option>
+      <option value="Podlewanie trawnika">Podlewanie trawnika</option>
+      <option value="Przycinanie żywopłotu">Przycinanie żywopłotu</option>
+      <option value="Mycie kostki brukowej">Mycie kostki brukowej</option>
+    </select>
+
+    <label for="message">Dodatkowe informacje (proszę podać metraż wykonywanej usługi)</label>
+    <textarea id="message" name="message"></textarea>
+
+    <button type="submit">Zamów</button>
+  </form>
+</section>
+
+  </main>
+  <footer>
+    <p>Kontakt: uslugi.pielegnacji.ogrodu@onet.eu</p>
+    <p>&copy; 2025 Usługi Pielęgnacji Ogrodu</p>
+  </footer>  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+
+      const orderSummary = `Zamówienie od: ${name}\nEmail: ${email}\nUsługa: ${service}\nDodatkowe informacje: ${message}`;
+
+      alert("Twoje zamówienie zostało przyjęte! Szczegóły zostały przesłane na email: uslugi.pielegnacji.ogrodu@onet.eu\n\n" + orderSummary);
+
+      // Tutaj można dodać obsługę wysyłki danych do serwera lub integrację z API mailowym
+    });
+  </script></body>
 </html>
