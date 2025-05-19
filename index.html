@@ -138,17 +138,7 @@
     <p>&copy; 2025 Usługi Pielęgnacji Ogrodu</p>
   </footer>  <script>
     document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const service = document.getElementById('service').value;
-      const message = document.getElementById('message').value;
-
-      const orderSummary = `Zamówienie od: ${name}\nEmail: ${email}\nUsługa: ${service}\nDodatkowe informacje: ${message}`;
-
-      alert("Twoje zamówienie zostało przyjęte! Szczegóły zostały przesłane na email: uslugi.pielegnacji.ogrodu@onet.eu\n\n" + orderSummary);
-
+    
       <?php
 $to = "uslugi.pielegnacji.ogrodu@onet.eu";
 $subject = "Nowe zamówienie ogrodowe";
