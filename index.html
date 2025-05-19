@@ -149,6 +149,25 @@
 
       alert("Twoje zamówienie zostało przyjęte! Szczegóły zostały przesłane na email: uslugi.pielegnacji.ogrodu@onet.eu\n\n" + orderSummary);
 
+      <?php
+$to = "uslugi.pielegnacji.ogrodu@onet.eu";
+$subject = "Nowe zamówienie ogrodowe";
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$service = $_POST['service'];
+$message = $_POST['message'];
+
+$body = "Zamówienie od: $name\nEmail klienta: $email\nUsługa: $service\nDodatkowe informacje:\n$message";
+
+$headers = "From: formularz@twojadomena.pl";
+
+if (mail($to, $subject, $body, $headers)) {
+    echo "Dziękujemy! Zamówienie zostało wysłane.";
+} else {
+    echo "Wystąpił błąd. Spróbuj ponownie.";
+}
+?>
       // Tutaj można dodać obsługę wysyłki danych do serwera lub integrację z API mailowym
     });
   </script></body>
